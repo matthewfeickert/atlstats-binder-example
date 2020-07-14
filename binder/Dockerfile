@@ -37,6 +37,7 @@ RUN python -m pip install --upgrade --no-cache-dir pip setuptools wheel && \
 # Make sure the contents of the repo are in ${HOME}
 COPY . ${HOME}
 USER root
+RUN python -m pip install --no-cache-dir -r ${HOME}/requirements.txt
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 WORKDIR ${HOME}
