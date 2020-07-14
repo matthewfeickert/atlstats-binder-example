@@ -9,7 +9,6 @@ SHELL [ "/bin/bash", "-c" ]
 # Install required packages for notebooks
 RUN apt-get update && \
     apt-get install -qq -y \
-        sudo \
         wget \
         git && \
     apt-get -y autoclean && \
